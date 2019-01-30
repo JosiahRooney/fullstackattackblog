@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Img, Link, StaticQuery, graphql } from 'gatsby'
 import './Layout.css'
 import './Link.css'
 
@@ -7,7 +7,7 @@ import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, data } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
     let nav = (
@@ -69,6 +69,7 @@ class Layout extends React.Component {
         </h2>
       )
     }
+
     return (
       <div
         style={{

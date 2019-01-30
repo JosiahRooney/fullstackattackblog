@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+http://fullstackattack.io/* http://www.fullstackattack.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+http://fullstackattack.netlify.com/* http://www.fullstackattack.com/:splat 301!

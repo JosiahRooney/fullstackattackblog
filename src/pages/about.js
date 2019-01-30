@@ -53,7 +53,13 @@ class About extends React.Component {
                 }}
               >About Me</h3>
               <p>
-                
+                I'm a senior front end software engineer working for Zenni Optical in Novato, CA. At work I am converting our web application from jQuery &amp; Bootstrap to React, Webpack, and Babel ES6. I've been a professional developer for almost 10 years.
+              </p>
+              <p>
+                I'm an advocate for modern web technology, especially component-based UI frameworks. I believe many problems have already been solved in code and we should leverage existing solutions instead of always building our own.
+              </p>
+              <p>
+                Aside from attending a full stack software engineering boot camp, I am fully self taught. I've been writing HTML &amp; CSS code since the 1990s. I learned JavaScript in the early 2000s. I try to spend at least 2-3 hours a week learning new technology. This blog itself was built on Gatsby.js and deployed to Netlify (with domain from AWS Route 53).
               </p>
             </div>
           </Layout>
