@@ -1,21 +1,12 @@
 ---
 title: Hello World
-date: '2015-05-01T22:12:03.284Z'
+date: '2019-01-30T11:12:12.387Z'
 ---
 
-This is my first post on my new fake blog! How exciting!
+Welcome to my blog!
 
-I'm sure I'll write a lot more interesting things in the future.
+This is the start of something great. I have learned a lot about programming and tech and I find myself wanting to share what I've learned with others. One of the greatest joys in my life is seeing someone grasp a concept that they struggled with and that I am explaining to them.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+I am a strong advocate for the next generation of programmers, lifelong learners, teachers, and tech geeks. The future of society will be very driven by technology, and if we make technology and programming accessible to anyone, it ensures a better future for everyone.
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg)
+If you have any thoughts about what kind of tech-related content I should cover in my blog, please leave a comment below. Otherwise, enjoy!

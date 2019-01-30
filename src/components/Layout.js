@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import './Layout.css'
+import './Link.css'
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -8,13 +10,29 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+    let nav = (
+      <div className="navigation">
+        <ul className="nav-list">
+          <li>
+            {
+              location.pathname === rootPath ? <Link to={`/`}><span className="active">Home</span></Link> : <Link to={`/`}>Home</Link>
+            }
+          </li>
+          <li>
+            {
+              location.pathname === '/about' ? <Link to={`/about`}><span className="active">About</span></Link> : <Link to={`/about`}>About</Link>
+            }
+          </li>
+        </ul>
+      </div>
+    )
 
     if (location.pathname === rootPath) {
       header = (
         <h1
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            marginBottom: rhythm(1),
             marginTop: 0,
           }}
         >
@@ -32,7 +50,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
+        <h2
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
@@ -48,7 +66,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h3>
+        </h2>
       )
     }
     return (
@@ -61,6 +79,7 @@ class Layout extends React.Component {
         }}
       >
         {header}
+        {nav}
         {children}
         <footer>
           © {new Date().getFullYear()}, Built with love and 

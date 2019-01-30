@@ -1,0 +1,8 @@
+a {
+  box-shadow: none;
+}
+
+.active {
+  text-decoration: none;
+  color: #888;
+}
