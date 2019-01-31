@@ -19,13 +19,29 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     };
 
+    let tags = [];
+    let arr = post.frontmatter.tags;
+    let location = this.props.location.pathname;
+    for (let i = 0; i < arr.length; i++) {
+      let path = `/tags/${arr[i]}?returnTo=${location}`;
+      tags.push(
+        <Link key={i} to={path}>{arr[i]}</Link>
+      )
+    }
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            fontSize: rhythm(1 / 3)
+            fontSize: rhythm(1 / 2),
+            marginBottom: `3px`
+          }}
+        >Tags: {tags}</p>
+        <p
+          style={{
+            fontSize: rhythm(1 / 2)
           }}
         ><Link to={`/`}>&larr; Back to all posts</Link></p>
         <p
@@ -70,6 +86,11 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <p
+          style={{
+            fontSize: rhythm(1 / 2)
+          }}
+        >Tags: {tags}</p>
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
@@ -93,6 +114,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
+        path
+        published
       }
     }
   }

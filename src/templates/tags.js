@@ -14,16 +14,26 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
 
+  let linkBack = null
+
+  const urlParams = new URLSearchParams(window.location.search)
+
+  if (urlParams.has('returnTo')) {
+    linkBack = <Link to={urlParams.get('returnTo')}>&larr; Back to post</Link>
+  }
+
   return (
     <Layout location={`/tags/${tag}/`} title={'Full Stack Attack'}>
       <div>
         <h1>{tagHeader}</h1>
         <div
           style={{
-            marginBottom: rhythm(1)
+            marginBottom: rhythm(1),
+            fontSize: rhythm(1 / 2)
           }}
         >
-          <Link to="/tags">&larr; All tags</Link>
+          <div>{linkBack}</div>
+          <div><Link to="/tags">&larr; All tags</Link></div>
         </div>
         <ul>
           {edges.map(({ node }) => {

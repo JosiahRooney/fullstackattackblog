@@ -12,7 +12,7 @@ class Layout extends React.Component {
     let header
 
     let nav = (
-      <div className="navigation">
+      <div className="navigation container">
         <ul className="nav-list">
           <li>
             {
@@ -36,6 +36,7 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <h1
+          className="container"
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1),
@@ -57,6 +58,7 @@ class Layout extends React.Component {
     } else {
       header = (
         <h2
+          className="container"
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
@@ -77,21 +79,22 @@ class Layout extends React.Component {
     }
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {nav}
-        {children}
+      <div className={`wrapper`}>
+        <header>
+          {header}
+        </header>
+        <div>
+          {nav}
+        </div>
+        <div>
+          <div className="container">{children}</div>
+        </div>
         <footer>
-          © {new Date().getFullYear()}, Built with love and 
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="container">
+            © {new Date().getFullYear()}, Built with love and 
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </div>
         </footer>
       </div>
     )
