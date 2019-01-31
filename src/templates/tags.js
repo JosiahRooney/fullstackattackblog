@@ -7,8 +7,6 @@ import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
 import { rhythm } from "../utils/typography";
 
-import 'url-search-params-polyfill';
-
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -18,10 +16,13 @@ const Tags = ({ pageContext, data }) => {
 
   let linkBack = null
 
-  const urlParams = new URLSearchParams(window.location.search)
+  let urlParams = null
 
-  if (urlParams.has('returnTo')) {
-    linkBack = <Link to={urlParams.get('returnTo')}>&larr; Back to post</Link>
+  if (window) {
+    urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.has('returnTo')) {
+      linkBack = <Link to={urlParams.get('returnTo')}>&larr; Back to post</Link>
+    }
   }
 
   return (
