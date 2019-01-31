@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
 
   let urlParams = null
 
-  if (window) {
+  if (typeof window !== `undefined`) {
     urlParams = new URLSearchParams(window.location.search)
     if (urlParams.has('returnTo')) {
       linkBack = <Link to={urlParams.get('returnTo')}>&larr; Back to post</Link>
