@@ -10,17 +10,23 @@ class Layout extends React.Component {
     const { location, title, children, data } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+
     let nav = (
       <div className="navigation">
         <ul className="nav-list">
           <li>
             {
-              location.pathname === rootPath ? <Link to={`/`}><span className="active">Home</span></Link> : <Link to={`/`}>Home</Link>
+              location.pathname === rootPath ? <Link to={`/`}><span className="active">Posts</span></Link> : <Link to={`/`}>Posts</Link>
             }
           </li>
           <li>
             {
               location.pathname === '/about' ? <Link to={`/about`}><span className="active">About</span></Link> : <Link to={`/about`}>About</Link>
+            }
+          </li>
+          <li>
+            {
+              location === '/tags' ? <Link to={`/tags`}><span className="active">Tags</span></Link> : <Link to={`/tags`}>Tags</Link>
             }
           </li>
         </ul>
