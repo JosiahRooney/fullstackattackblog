@@ -59,7 +59,7 @@ class About extends React.Component {
                 I'm an advocate for modern web technology, especially component-based UI frameworks. I believe many problems have already been solved in code and we should leverage existing solutions instead of always building our own.
               </p>
               <p>
-                Aside from attending a full stack software engineering boot camp, I am fully self taught. I've been writing HTML &amp; CSS code since the 1990s. I learned JavaScript in the early 2000s. I try to spend at least 2-3 hours a week learning new technology. This blog itself was built on Gatsby.js and deployed to Netlify (with domain from AWS Route 53).
+                Aside from attending a full stack software engineering boot camp, I am fully self taught. I've been writing HTML &amp; CSS code since the 1990s. I learned JavaScript in the early 2000s. I try to spend at least 2-3 hours a week learning new technology. This blog itself was built with technology that's new to me. It runs on Gatsby.js and was deployed to Netlify (with domain from AWS Route 53).
               </p>
             </div>
           </Layout>

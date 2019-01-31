@@ -25,6 +25,11 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
+            fontSize: rhythm(1 / 3)
+          }}
+        ><Link to={`/`}>&larr; Back to all posts</Link></p>
+        <p
+          style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
