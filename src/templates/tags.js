@@ -7,6 +7,8 @@ import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
 import { rhythm } from "../utils/typography";
 
+import 'url-search-params-polyfill';
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
