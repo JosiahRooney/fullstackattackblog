@@ -52,6 +52,13 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
+        
+        <p
+          style={{
+            fontSize: rhythm(1 / 2),
+            marginBottom: 0
+          }}
+        >Sharing is caring:</p>
         <Share 
           socialConfig={{
             twitterHandle,
@@ -119,6 +126,21 @@ class BlogPostTemplate extends React.Component {
             fontSize: rhythm(1 / 2)
           }}
         >Tags: {tagsArr}</p>
+        <p
+          style={{
+            fontSize: rhythm(1 / 2),
+            marginBottom: 0
+          }}
+        >Sharing is caring:</p>
+        <Share 
+          socialConfig={{
+            twitterHandle,
+            config: {
+              url: `${url}${slug}`,
+              title: siteTitle,
+            },
+          }}
+        />
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
