@@ -14,7 +14,6 @@ const StyledImg = styled(Image)`
 
 class About extends React.Component {
   render() {
-    console.log(this.props)
     const { data } = this.props
     const siteTitle = "Full Stack Attack"
 
