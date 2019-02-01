@@ -20,6 +20,9 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         {posts.map(({ node }) => {
+          if (!node.frontmatter.published) {
+            return null;
+          }
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div 
@@ -72,6 +75,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            published
           }
         }
       }

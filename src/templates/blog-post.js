@@ -24,9 +24,22 @@ class BlogPostTemplate extends React.Component {
     let location = this.props.location.pathname;
     for (let i = 0; i < arr.length; i++) {
       let path = `/tags/${arr[i]}?returnTo=${location}`;
+      let comma = i !== arr.length - 1 ? ', ' : '';
       tags.push(
-        <Link key={i} to={path}>{arr[i]}</Link>
+        <span key={i}><Link key={i} to={path}>{arr[i]}</Link>{comma}</span>
       )
+    }
+
+    if (previous) {
+      let previousName = previous.frontmatter.path.split('/')[1].split('-');
+      previous.title = previousName.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+      previous.title = previous.title.join(' ');
+    }
+
+    if (next) {
+      let nextName = next.frontmatter.path.split('/')[1].split('-');
+      next.title = nextName.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+      next.title = next.title.join(' ');
     }
 
     return (
@@ -74,14 +87,14 @@ class BlogPostTemplate extends React.Component {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                ← {previous.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.title} →
               </Link>
             )}
           </li>
