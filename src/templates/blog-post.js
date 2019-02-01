@@ -4,13 +4,19 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import Share from '../components/Share'
+
 import { rhythm, scale } from '../utils/typography'
 import { DiscussionEmbed } from "disqus-react"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const data = this.props.data;
+    const post = data.markdownRemark
+    const siteTitle = data.site.siteMetadata.title
+    const twitterHandle = data.site.siteMetadata.social.twitterHandle
+    const url = data.site.siteMetadata.social.url
+    const slug = post.frontmatter.path
     const { previous, next } = this.props.pageContext
 
     const disqusShortname = "full-stack-attack";
@@ -19,13 +25,13 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     };
 
-    let tags = [];
+    let tagsArr = [];
     let arr = post.frontmatter.tags;
     let location = this.props.location.pathname;
     for (let i = 0; i < arr.length; i++) {
       let path = `/tags/${arr[i]}?returnTo=${location}`;
       let comma = i !== arr.length - 1 ? ', ' : '';
-      tags.push(
+      tagsArr.push(
         <span key={i}><Link key={i} to={path}>{arr[i]}</Link>{comma}</span>
       )
     }
@@ -46,12 +52,21 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
+        <Share 
+          socialConfig={{
+            twitterHandle,
+            config: {
+              url: `${url}${slug}`,
+              title: siteTitle,
+            },
+          }}
+        />
         <p
           style={{
             fontSize: rhythm(1 / 2),
             marginBottom: `3px`
           }}
-        >Tags: {tags}</p>
+        >Tags: {tagsArr}</p>
         <p
           style={{
             fontSize: rhythm(1 / 2)
@@ -103,7 +118,7 @@ class BlogPostTemplate extends React.Component {
           style={{
             fontSize: rhythm(1 / 2)
           }}
-        >Tags: {tags}</p>
+        >Tags: {tagsArr}</p>
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
@@ -118,6 +133,10 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        social {
+          twitterHandle
+          url
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

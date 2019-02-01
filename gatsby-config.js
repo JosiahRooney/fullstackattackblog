@@ -3,9 +3,11 @@ module.exports = {
     title: `Full Stack Attack`,
     author: `Josiah Rooney`,
     description: `All things full stack, from the perspective of a self-taught, perpetual learner of tech.`,
-    siteUrl: `https://www.fullstackattack.com/`,
+    siteUrl: `https://fullstackattack.com/`,
     social: {
       twitter: `josiahrooney`,
+      twitterHandle: `@josiahrooney`,
+      url: `https://fullstackattack.com`
     },
   },
   plugins: [
@@ -109,5 +111,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-sass`,
   ],
 }
