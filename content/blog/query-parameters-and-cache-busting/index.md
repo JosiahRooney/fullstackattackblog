@@ -20,7 +20,7 @@ What about the end user, the person you are developing your fancy new website fo
 
 ### Query String Parameters
 
-Let's quickly review what query string parameters are and what purpose they serve. A quest string is part of a URL that contains key/value pairs. For example:
+Let's quickly review what query string parameters are and what purpose they serve. A query string is part of a URL that contains key/value pairs. For example:
 
 ```
 http://example.com/page/?name=joe&age=5&refer=true
