@@ -3,6 +3,7 @@ path: '/hello-world'
 title: Hello World
 date: '2019-01-30T11:12:12.387Z'
 tags: ['general', 'opinion']
+image: './hello-world.jpg'
 published: true
 ---
 

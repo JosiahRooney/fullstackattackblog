@@ -50,7 +50,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO title={post.frontmatter.title} description={post.excerpt} image={post.frontmatter.image.childImageSharp.fluid.src} />
         <h1>{post.frontmatter.title}</h1>
         
         <p
@@ -171,6 +171,13 @@ export const pageQuery = graphql`
         tags
         path
         published
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

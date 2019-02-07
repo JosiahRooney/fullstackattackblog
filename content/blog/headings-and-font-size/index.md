@@ -3,12 +3,11 @@ path: '/headings-and-font-size'
 title: Headings and Font Size
 date: '2019-02-06T22:23:12.387Z'
 tags: ['opinion']
+image: './plants.jpg'
 published: true
 ---
 
 ![alt text](plants.jpg "Green plants taken with tilt shift photography")
-
-## The Right Heading
 
 I often hear from clients or designers that they'd like to see a font size larger or smaller, so I should "make it an H5 instead of an H4". In their mind, an H5, H4, or any heading element merely represents a specific font size, any usually nothing more. Interestingly, this is what [The MDN has to say about that notion](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#Usage_notes):
 
