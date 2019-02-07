@@ -2,7 +2,7 @@
 path: '/query-parameters-and-cache-busting'
 title: Query String Parameters and Cache Busting
 date: '2019-01-31T20:34:55.583Z'
-tags: ['css', 'cache', 'query string']
+tags: ['css', 'cache', 'query string', 'instruction']
 published: true
 ---
 

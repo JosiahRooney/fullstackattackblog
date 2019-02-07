@@ -2,7 +2,7 @@
 path: '/hello-world'
 title: Hello World
 date: '2019-01-30T11:12:12.387Z'
-tags: ['general']
+tags: ['general', 'opinion']
 published: true
 ---
 

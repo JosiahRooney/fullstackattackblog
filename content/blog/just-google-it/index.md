@@ -2,7 +2,7 @@
 path: '/just-google-it'
 title: Just Google It
 date: '2019-01-31T19:36:06.650Z'
-tags: ['mentoring', 'inclusion']
+tags: ['mentoring', 'inclusion', 'opinion']
 published: true
 ---
 
