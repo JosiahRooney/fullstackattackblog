@@ -3,11 +3,11 @@ module.exports = {
     title: `Full Stack Attack`,
     author: `Josiah Rooney`,
     description: `All things full stack, from the perspective of a self-taught, perpetual learner of tech.`,
-    siteUrl: `https://fullstackattack.com/`,
+    siteUrl: `https://fullstackattack.io/`,
     social: {
       twitter: `josiahrooney`,
       twitterHandle: `@josiahrooney`,
-      url: `https://fullstackattack.com`
+      url: `https://fullstackattack.io`
     },
   },
   plugins: [
