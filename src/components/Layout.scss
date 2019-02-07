@@ -1,0 +1,126 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  color: white;
+  background-color: black;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #ddd;
+
+  a {
+    color: #2ba4cc;
+  }
+
+  header {
+    color: #333;
+    background-color: rgb(176, 179, 166);
+  }
+
+  blockquote p {
+    color: #999;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.dark-mode-toggle {
+  padding: 15px;
+}
+
+.toggle {
+	display: none;
+  
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .toggle-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  
+	+ .toggle-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+    
+		&:after {
+			left: 0;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .toggle-btn:after {
+		left: 50%;
+	}
+}
+
+// themes
+.toggle-light {
+	+ .toggle-btn {
+		background: #8f8f8f;
+		border-radius: 2em;
+		padding: 2px;
+    transition: all .4s ease;
+    &:before {
+      content: "🌙  ☀️";
+      color: white;
+      display: block;
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      left: 9px;
+    }
+		&:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+		}
+	}
+  
+	&:checked + .toggle-btn {
+    background: #5a5a5a;
+    &:after {
+			background: #333;
+		}
+	}
+}

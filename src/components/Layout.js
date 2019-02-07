@@ -1,11 +1,17 @@
 import React from 'react'
 import { Img, Link, StaticQuery, graphql } from 'gatsby'
-import './Layout.css'
+import './Layout.scss'
 import './Link.css'
 
 import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
+
+  handleDarkMode() {
+    let body = document.querySelector('body');
+    body.classList.contains('dark-mode') ? body.classList.remove('dark-mode') : body.classList.add('dark-mode')
+  }
+
   render() {
     const { location, title, children, data } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -83,6 +89,10 @@ class Layout extends React.Component {
         <header>
           {header}
         </header>
+        <div className="dark-mode-toggle">
+          <input onClick={this.handleDarkMode} className="toggle toggle-light" id="dark-mode" type="checkbox" />
+          <label className="toggle-btn" htmlFor="dark-mode"></label>
+        </div>
         <div>
           {nav}
         </div>

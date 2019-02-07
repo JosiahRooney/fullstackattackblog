@@ -1,3 +1,7 @@
 .active {
   color: #888;
 }
+
+body.dark-mode .active {
+  color: #aaa;
+}
