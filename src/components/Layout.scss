@@ -124,3 +124,13 @@ body.dark-mode {
 		}
 	}
 }
+
+h4 {
+	text-transform: initial;
+	letter-spacing: 0;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	padding: 6px;
+}
