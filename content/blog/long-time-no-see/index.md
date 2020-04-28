@@ -1,7 +1,7 @@
 ---
 path: '/long-time-no-see'
 title: Long Time No See!
-date: '2020-04-28T04:23:09.669Z'
+date: '2020-04-27T21:44:09.669Z'
 tags: ['work', 'life', 'typescript', 'quarantine']
 image: './library.jpeg'
 published: true
