@@ -52,7 +52,7 @@ class About extends React.Component {
                 }}
               >About Me</h3>
               <p>
-                I'm a senior front end software engineer working for Zenni Optical in Novato, CA. At work I am converting our web application from jQuery &amp; Bootstrap to React, Webpack, and Babel ES6. I've been a professional developer for almost 10 years.
+                I'm a senior front end software engineer working for Zenlist. I've been a professional developer for almost 10 years.
               </p>
               <p>
                 I'm an advocate for modern web technology, especially component-based UI frameworks. I believe many problems have already been solved in code and we should leverage existing solutions instead of always building our own.
